@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+/* Estilos para los contenedores de formularios */
+.form-floating {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las etiquetas de los campos de entrada */
+label {
+  display: block; /* Mostrar las etiquetas en una línea separada */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* Estilos para los campos de entrada */
+input {
+  width: 100%; /* Ancho completo del contenedor */
+  padding: 0.375rem 0.75rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea */
+  color: #212529; /* Color de texto */
+  background-color: #fff; /* Color de fondo */
+  background-clip: padding-box; /* No mostrar el color de fondo en el relleno extendido */
+  border: 1px solid #ced4da; /* Borde */
+  border-radius: 0.25rem; /* Radio de borde */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transiciones */
+}
+
+/* Estilos cuando se enfoca un campo de entrada */
+input:focus {
+  border-color: #86b7fe; /* Color del borde cuando se enfoca */
+  outline: 0; /* Eliminar el contorno predeterminado del campo de entrada */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Sombra cuando se enfoca */
+}
+button[type="submit"] {
+  background-color: #2d77c7;
+
+}
+

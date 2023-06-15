@@ -1,0 +1,27 @@
+.cabecero {
+  height: 40vh;
+  background-size: fill;
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: #fff;
+  background-image: url(../../../assets/bg-pattern.png), #7b4397;
+  background-image: url(../../../assets/bg-pattern.png), -webkit-gradient(linear, right top, left top, from(#0d989cea), to(#003cffe7));
+  background-image: url(../../../assets/bg-pattern.png), linear-gradient(to left, #069c9c88, #007ac0c0)
+}
+
+.presupuesto {
+  position: absolute;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.presupuesto_titulo{
+  font-size: 70px;
+  text-align: center;
+  font-weight: 300;
+}

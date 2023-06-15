@@ -1,0 +1,112 @@
+<div class="fondo">
+  <div class="auth-container">
+    <div class="auth-tabs">
+      <button
+        class="auth-tab"
+        [class.active]="activeTab === 'login'"
+        (click)="switchTab('login')"
+      >
+        Iniciar sesión
+      </button>
+      <button
+        class="auth-tab"
+        [class.active]="activeTab === 'register'"
+        (click)="switchTab('register')"
+      >
+        Registrarse
+      </button>
+    </div>
+
+    <div class="auth-form">
+      <form *ngIf="activeTab === 'login'">
+        <h2>Iniciar sesión</h2>
+        <div class="form-group">
+          <label for="login-email">Email:</label>
+          <input
+            type="text"
+            id="login-email"
+            name="login-email"
+            [(ngModel)]="loginEmail"
+          />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Contraseña:</label>
+          <input
+            type="password"
+            id="login-password"
+            name="login-password"
+            [(ngModel)]="loginPassword"
+          />
+        </div>
+        <select
+          class="form-select form-select-lg mb-3"
+          aria-label=".form-select-lg example"
+          (change)="onChange($event)"
+        >
+          <option selected>Selecciona el tipo de usuario</option>
+          <option value="1">Adiminstrador</option>
+          <option value="2">Medico</option>
+          <option value="3">Paciente</option>
+        </select>
+        <ng-container *ngIf="selectedComponent === '1'">
+
+          <button
+          (click)="onLoginSubmitAdmin()"
+            id="iniciarSesionAdmin"
+            type="submit"
+          >
+            Iniciar sesión como Administrador
+          </button>
+        </ng-container>
+        <ng-container *ngIf="selectedComponent === '2'">
+          <button
+            (click)="onLoginSubmitMedic()"
+            id="iniciarSesionMedic"
+            type="submit"
+          >
+            Iniciar sesión como Medico
+          </button>
+        </ng-container>
+        <ng-container *ngIf="selectedComponent === '3'">
+          <button
+            (click)="onLoginSubmitPatient()"
+            id="iniciarSesionPaciente"
+            type="submit"
+          >
+            Iniciar sesión como paciente
+          </button>
+        </ng-container>
+      </form>
+    <div class="colum">
+      <div class="registro">
+
+        <form *ngIf="activeTab === 'register'">
+          <h2>Registrarse</h2>
+
+          <select
+            class="form-select form-select-lg mb-3"
+            aria-label=".form-select-lg example"
+            (change)="onChange($event)"
+          >
+            <option selected>Selecciona el tipo de usuario</option>
+            <option value="1">Adiminstrador</option>
+            <option value="2">Medico</option>
+            <option value="3">Paciente</option>
+          </select>
+          <ng-container *ngIf="selectedComponent === '1'">
+            <app-administrador></app-administrador>
+          </ng-container>
+          <ng-container *ngIf="selectedComponent === '2'">
+            <app-medico></app-medico>
+          </ng-container>
+          <ng-container *ngIf="selectedComponent === '3'">
+            <app-paciente></app-paciente>
+          </ng-container>
+        </form>
+      </div>
+    </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

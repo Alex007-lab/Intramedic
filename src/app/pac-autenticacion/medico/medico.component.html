@@ -1,0 +1,99 @@
+<div class="col">
+  <div class="row">
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Nombre:"
+        type="text"
+        id="register-username"
+        name="register-username"
+        [(ngModel)]="registerNombre"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Apellido paterno:"
+        type="text"
+        id="register-username"
+        name="register-username"
+        [(ngModel)]="registerApellidoP"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Apellido Materno:"
+        type="text"
+        id="register-username"
+        name="register-username"
+        [(ngModel)]="registerApellidoM"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Email"
+        type="email"
+        id="register-Email"
+        name="register-username"
+        [(ngModel)]="registerEmail"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Contraseña"
+        type="password"
+        id="register-password"
+        name="register-password"
+        [(ngModel)]="registerPassword"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Ingresa tu Especialidad"
+        type="text"
+        id="InputRol"
+        name="InputRol"
+        [(ngModel)]="especialidad"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="¿Que cargo tienes dentro del Area?"
+        type="text"
+        id="Inputcargo"
+        name="Inputcargo"
+        [(ngModel)]="cargo"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Ingresa tu licencia medica"
+        type="text"
+        id="InputnumeroDeColegiado"
+        name="InputnumeroDeColegiado"
+        [(ngModel)]="numeroDeColegiado"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Turno"
+        type="text"
+        id="Inputhorario"
+        name="Inputhorario"
+        [(ngModel)]="horario"
+      />
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        placeholder="Ingresa tu numero de telefono"
+        type="text"
+        id="Inputtelefono"
+        name="Inputtelefono"
+        [(ngModel)]="telefono"
+      />
+    </div>
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="submit" (click)="Registrarse()">
+      Registrarse
+    </button>
+  </div>
+</div>
