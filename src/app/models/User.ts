@@ -37,16 +37,7 @@ export class Medic {
     public telefono: number
   ) {}
 }
-export class citas {
-  constructor(
-    public paciente:User,
-    public Hora: string,
-    public Dia: string,
-    public mes: string,
-    public año: string,
-    public area: string
-  ) {}
-}
+
 
 export class recetas {
   constructor(

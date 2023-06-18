@@ -1,72 +1,81 @@
-<div class="col">
-  <div class="row">
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Nombre:"
-        type="text"
-        id="register-username"
-        name="register-username"
-        [(ngModel)]="registerNombre"
-      />
+<form (ngSubmit)="f.form.valid && Registrarse()" #f="ngForm">
+  <div class="col">
+    <div class="row">
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Nombre:"
+          type="text"
+          id="register-username"
+          name="register-username"
+          [(ngModel)]="registerNombre"
+          required
+        />
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Apellido paterno:"
+          type="text"
+          id="register-ApellidoP"
+          name="register-ApellidoP"
+          [(ngModel)]="registerApellidoP"
+          required
+        />
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Apellido Materno:"
+          type="text"
+          id="register-ApellidoM"
+          name="register-ApellidoM"
+          [(ngModel)]="registerApellidoM"
+          required
+        />
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Email"
+          type="email"
+          id="register-Email"
+          name="register-Email"
+          [(ngModel)]="registerEmail"
+          required
+        />
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Contraseña"
+          type="password"
+          id="register-password"
+          name="register-password"
+          [(ngModel)]="registerPassword"
+          required
+        />
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Rol"
+          type="text"
+          id="InputRol"
+          name="InputRol"
+          [(ngModel)]="Rol"
+          required
+        />
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Area O Departamento"
+          type="text"
+          id="InputArea"
+          name="InputArea"
+          [(ngModel)]="AreaODepartamento"
+          required
+        />
+      </div>
     </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Apellido paterno:"
-        type="text"
-        id="register-ApellidoP"
-        name="register-ApellidoP"
-        [(ngModel)]="registerApellidoP"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Apellido Materno:"
-        type="text"
-        id="register-ApellidoM"
-        name="register-ApellidoM"
-        [(ngModel)]="registerApellidoM"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Email"
-        type="email"
-        id="register-Email"
-        name="register-Email"
-        [(ngModel)]="registerEmail"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Contraseña"
-        type="password"
-        id="register-password"
-        name="register-password"
-        [(ngModel)]="registerPassword"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Rol"
-        type="text"
-        id="InputRol"
-        name="InputRol"
-        [(ngModel)]="Rol"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Area O Departamento"
-        type="text"
-        id="InputArea"
-        name="InputArea"
-        [(ngModel)]="AreaODepartamento"
-      />
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="submit">
+        Registrarse
+      </button>
     </div>
   </div>
-  <div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn btn-primary" type="submit" (click)="Registrarse()">
-      Registrarse
-    </button>
-  </div>
-</div>
+</form>

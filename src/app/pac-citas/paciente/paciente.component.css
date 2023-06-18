@@ -1,0 +1,85 @@
+body {
+  background-color: #EAF2F8; /* Azul claro */
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.back{
+  float: right;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+select,
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4286f4; /* Azul */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1c5db5; /* Azul oscuro */
+}
+
+.container {
+  border: 1px solid #00b7ff;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  padding-bottom: 60px;
+
+}
+
+
+.box2{
+  margin: 60px auto;
+  background: rgb(177, 192, 192);
+  border-radius: 5px;
+  border-color: cadetblue;
+}
+
+#heading {
+  background-color: #3F51B5;
+  text-align: center;
+}
+.item:last-child {
+  border-bottom: 0;
+}

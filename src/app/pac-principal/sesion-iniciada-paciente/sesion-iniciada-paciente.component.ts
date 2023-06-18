@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SesionIniciadaPacienteComponent {
 
+  selectedComponent: string;
+
+  onChange(evento: any) {
+    this.selectedComponent = evento.target.value;
+  }
+
+
 }

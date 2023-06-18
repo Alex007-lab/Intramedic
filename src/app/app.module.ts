@@ -21,6 +21,12 @@ import { SesionIniciadaAdminComponent } from './pac-principal/sesion-iniciada-ad
 import { SesionIniciadaPacienteComponent } from './pac-principal/sesion-iniciada-paciente/sesion-iniciada-paciente.component';
 import { ResultadosMedicComponent } from './pac-expediente-resultados/resultados-medic/resultados-medic.component';
 import { ResultadosPacienteComponent } from './pac-expediente-resultados/resultados-paciente/resultados-paciente.component';
+import { PacienteComponentCitas } from './pac-citas/paciente/paciente.component';
+import { CitasComponentL } from './pac-citas/citas/citas.component';
+import { AuthService } from './autentication.service';
+import { citaService } from './cita.service';
+import { CitasEComponent } from './pac-citas/citas-e/citas-e.component';
+import { CitasMGComponent } from './pac-citas/citas-mg/citas-mg.component';
 
 @NgModule({
   declarations: [
@@ -43,13 +49,17 @@ import { ResultadosPacienteComponent } from './pac-expediente-resultados/resulta
     SesionIniciadaPacienteComponent,
     ResultadosMedicComponent,
     ResultadosPacienteComponent,
+    PacienteComponentCitas,
+    CitasComponentL,
+    CitasEComponent,
+    CitasMGComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService,citaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

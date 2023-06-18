@@ -10,6 +10,7 @@ import { SesionIniciadaPacienteComponent } from './pac-principal/sesion-iniciada
 import { SesionIniciadaAdminComponent } from './pac-principal/sesion-iniciada-admin/sesion-iniciada-admin.component';
 import { MedicoComponentCitas } from './pac-citas/medico/medico.component';
 import { PacienteComponentCitas } from './pac-citas/paciente/paciente.component';
+import { ResultadosPacienteComponent } from './pac-expediente-resultados/resultados-paciente/resultados-paciente.component';
 
 const routes: Routes = [
   { path: 'LoginRegister', component: LoginRegisterComponent },
@@ -21,11 +22,12 @@ const routes: Routes = [
   { path: 'DashPatient', component: SesionIniciadaPacienteComponent },
   { path: 'DashAdmin', component: SesionIniciadaAdminComponent },
   { path: 'CitasMedico', component: MedicoComponentCitas },
-  { path: 'CitasPaciente', component: PacienteComponentCitas }
+  { path: 'CitasPaciente', component: PacienteComponentCitas },
+  { path: 'ResulPaciente', component: ResultadosPacienteComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

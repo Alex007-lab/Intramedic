@@ -1,54 +1,56 @@
-<div class="col">
-  <div class="row">
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Nombre:"
-        type="text"
-        id="register-username"
-        name="register-username"
-        [(ngModel)]="registerNombre"
-      />
+<form (ngSubmit)="f.form.valid && Registrarse()" #f="ngForm">
+  <div class="col">
+    <div class="row">
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Nombre:"
+          type="text"
+          id="register-username"
+          name="register-username"
+          [(ngModel)]="registerNombre"
+          required/>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Apellido paterno:"
+          type="text"
+          id="register-username"
+          name="register-username"
+          [(ngModel)]="registerApellidoP"
+          required/>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Apellido Materno:"
+          type="text"
+          id="register-username"
+          name="register-username"
+          [(ngModel)]="registerApellidoM"
+          required/>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Email"
+          type="email"
+          id="register-Email"
+          name="register-username"
+          [(ngModel)]="registerEmail"
+          required/>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          placeholder="Contraseña"
+          type="password"
+          id="register-password"
+          name="register-password"
+          [(ngModel)]="registerPassword"
+          required/>
+      </div>
     </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Apellido paterno:"
-        type="text"
-        id="register-username"
-        name="register-username"
-        [(ngModel)]="registerApellidoP"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Apellido Materno:"
-        type="text"
-        id="register-username"
-        name="register-username"
-        [(ngModel)]="registerApellidoM"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Email"
-        type="email"
-        id="register-Email"
-        name="register-username"
-        [(ngModel)]="registerEmail"
-      />
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        placeholder="Contraseña"
-        type="password"
-        id="register-password"
-        name="register-password"
-        [(ngModel)]="registerPassword"
-      />
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="submit">
+        Registrarse
+      </button>
     </div>
   </div>
-  <div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn btn-primary" type="submit" (click)="Registrarse()">
-      Registrarse
-    </button>
-  </div>
-</div>
+</form>

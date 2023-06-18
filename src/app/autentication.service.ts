@@ -8,7 +8,9 @@ import { Subject } from "rxjs";
 export class AuthService{
   private  persona:User;
   public MedicEncontrado:any;
-  
+  public PacienteEncontrado:any;
+  public AdminEncontrado:any;
+
 
 
   PersonasAdmin:Admin[]=[
@@ -18,18 +20,12 @@ export class AuthService{
     new Medic(100,"Fernando","Moreno","Castillo","Doctor@gmail.com","Abrigo","Pediatria","Cirujano",2193076909,"Vespertino",5527211580)
   ];
   PersonasPaciente:User[]=[
-    new User(100,"Pedro","Carrillo","Martinez","Paciente@gmai.com","AndoMalo")
+    new User(100,"Pedro","Carrillo","Martinez","Paciente@gmail.com","AndoMalo")
   ];
 
 
 
-  setUsuario(persona:User){
-    this.persona = persona;
-  }
 
-  getUsuario(){
-    return this.persona;
-  }
 
   RegistrarAdmin(Administrador:Admin){
     this.PersonasAdmin.push(Administrador);
@@ -38,8 +34,12 @@ export class AuthService{
 
 
   LoginAdmin(email:string,password:string){
-    const AdminEncontrado = this.PersonasAdmin.find(PersonasAdmin => PersonasAdmin.email === email && PersonasAdmin.password === password);
-    return AdminEncontrado;
+    this.AdminEncontrado = this.PersonasAdmin.find(PersonasAdmin => PersonasAdmin.email === email && PersonasAdmin.password === password);
+    return this.AdminEncontrado;
+  }
+
+  getUsuarioAdmin(){
+    return this.AdminEncontrado;
   }
 
 
@@ -60,8 +60,12 @@ export class AuthService{
   }
 
   LoginPaciente(email:string,password:string){
-    const PacientEncontrado = this.PersonasPaciente.find(PersonasPaciente => PersonasPaciente.email === email && PersonasPaciente.password == password);
-    return PacientEncontrado;
+    this.PacienteEncontrado = this.PersonasPaciente.find(PersonasPaciente => PersonasPaciente.email === email && PersonasPaciente.password == password);
+    return this.PacienteEncontrado;
+  }
+
+  getUsuarioPacient(){
+    return this.PacienteEncontrado;
   }
 
 
