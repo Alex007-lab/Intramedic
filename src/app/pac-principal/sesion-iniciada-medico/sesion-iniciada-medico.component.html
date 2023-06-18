@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INTRMEDIC</title>
-  <h1>INTRAMEDIC</h1>
+    <title>Sistema Médico - Sesión Iniciada</title>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-tabs">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="Home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link  " aria-current="page" routerLink="Urgencias">Urgencias</a>
-          </li>
+    <header>
+        <h2 >Bienvenido Dr. {{Medico}} </h2>
+        <hr>
+        <div class="another">
+          <ul class="nav nav-tabs nav-fill" style="color: rgba(240, 248, 255, 0);">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="../CitasMedico">Citas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#">Añdir Resultados de laboratorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Generar Expediente Medico</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Generar Receta Medica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registrar Urgencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cerrar Sesión</a>
+            </li>
+          </ul>
+        </div>
 
-          <li class="nav-item">
-            <a class="nav-link  " aria-current="page" routerLink="Queja">Quejas o Sugerencias</a>
-          </li>
-        </ul>
-        <form class="d-flex">
+    </header>
 
-              <button class="btn btn-outline-primary" routerLink="Home" >Cerrar Sesion</button>
+    <main>
+        <section>
+            <h3 style="text-align: center;">Pacientes</h3>
+            <br>
+            <hr>
+        </section>
 
-          <button class="btn btn-outline-primary" routerLink="Login" >Inicia Sesion O Registrate</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+        <section>
+          <h3 style="text-align: center;">Citas Próximas</h3>
+          <br>
+          <hr>
+        </section>
 
+        <section>
+            <h3>Historial Médico</h3>
+            <!-- Contenido relacionado con historial médico -->
+        </section>
+    </main>
 
+    <footer>
+        <p>Sistema Médico - Todos los derechos reservados</p>
+    </footer>
+
+    <router-outlet></router-outlet>
 </body>
 </html>

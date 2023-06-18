@@ -44,7 +44,7 @@ export class LoginRegisterComponent {
       this.Autenticacion.LoginMedic(this.loginEmail, this.loginPassword) != null
     ) {
       alert('Se ha iniciado sesión con exito');
-      this.Redirect = true;
+      this.router.navigate(['./DashMedic'])
     } else {
       alert('No existe el usuario o contraseña incorrecta');
     }
@@ -52,10 +52,10 @@ export class LoginRegisterComponent {
 
   onLoginSubmitPatient() {
     if (
-      this.Autenticacion.LoginAdmin(this.loginEmail, this.loginPassword) != null
+      this.Autenticacion.LoginPaciente(this.loginEmail, this.loginPassword) != null
     ) {
       alert('Se ha iniciado sesión con exito');
-      this.Redirect = true;
+      this.router.navigate(['./DashPatient'])
     } else {
       alert('No existe el usuario o contraseña incorrecta');
     }

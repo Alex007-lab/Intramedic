@@ -7,6 +7,8 @@ import { Subject } from "rxjs";
 })
 export class AuthService{
   private  persona:User;
+  public MedicEncontrado:any;
+  
 
 
   PersonasAdmin:Admin[]=[
@@ -46,8 +48,11 @@ export class AuthService{
   }
 
   LoginMedic(email:string,password:string){
-    const MedicEncontrado = this.PersonasMedic.find(PersonasMedic => PersonasMedic.email === email && PersonasMedic.password === password);
-    return MedicEncontrado;
+    this.MedicEncontrado = this.PersonasMedic.find(PersonasMedic => PersonasMedic.email === email && PersonasMedic.password === password);
+    return this.MedicEncontrado;
+  }
+  getUsuarioMedic(){
+    return this.MedicEncontrado;
   }
 
   RegistrarPaciente(Paciente:User){

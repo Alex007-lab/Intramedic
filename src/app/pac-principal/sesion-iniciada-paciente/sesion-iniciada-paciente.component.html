@@ -1,1 +1,59 @@
-<p>sesion-iniciada-paciente works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sistema Médico - Sesión Iniciada</title>
+</head>
+
+<body>
+    <header>
+        <h2 >Bienvenido </h2>
+        <hr>
+        <div class="another">
+          <ul class="nav nav-tabs nav-fill" style="color: rgba(240, 248, 255, 0);">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="../CitasMedico">Citas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#">Añdir Resultados de laboratorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Generar Expediente Medico</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Generar Receta Medica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registrar Urgencia</a>
+            </li>
+          </ul>
+        </div>
+
+    </header>
+
+    <main>
+        <section>
+            <h3 style="text-align: center;">Pacientes</h3>
+            <br>
+            <hr>
+        </section>
+
+        <section>
+          <h3 style="text-align: center;">Citas Próximas</h3>
+          <br>
+          <hr>
+        </section>
+
+        <section>
+            <h3>Historial Médico</h3>
+            <!-- Contenido relacionado con historial médico -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema Médico - Todos los derechos reservados</p>
+    </footer>
+
+    <router-outlet></router-outlet>
+</body>
+</html>

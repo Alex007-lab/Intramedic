@@ -8,6 +8,8 @@ import { MedicoComponent } from './pac-autenticacion/medico/medico.component';
 import { SesionIniciadaMedicoComponent } from './pac-principal/sesion-iniciada-medico/sesion-iniciada-medico.component';
 import { SesionIniciadaPacienteComponent } from './pac-principal/sesion-iniciada-paciente/sesion-iniciada-paciente.component';
 import { SesionIniciadaAdminComponent } from './pac-principal/sesion-iniciada-admin/sesion-iniciada-admin.component';
+import { MedicoComponentCitas } from './pac-citas/medico/medico.component';
+import { PacienteComponentCitas } from './pac-citas/paciente/paciente.component';
 
 const routes: Routes = [
   { path: 'LoginRegister', component: LoginRegisterComponent },
@@ -15,10 +17,11 @@ const routes: Routes = [
   { path: 'Paciente', component: PacienteComponent },
   { path: 'Medico', component: MedicoComponent },
   { path: '', component: DashboardComponent },
-  { path: 'Home', component: DashboardComponent },
   { path: 'DashMedic', component: SesionIniciadaMedicoComponent },
   { path: 'DashPatient', component: SesionIniciadaPacienteComponent },
-  { path: 'DashAdmin', component: SesionIniciadaAdminComponent }
+  { path: 'DashAdmin', component: SesionIniciadaAdminComponent },
+  { path: 'CitasMedico', component: MedicoComponentCitas },
+  { path: 'CitasPaciente', component: PacienteComponentCitas }
 ];
 
 @NgModule({
