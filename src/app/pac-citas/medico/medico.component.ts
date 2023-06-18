@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-medico',
+  selector: 'app-medico-citas',
   templateUrl: './medico.component.html',
   styleUrls: ['./medico.component.css']
 })

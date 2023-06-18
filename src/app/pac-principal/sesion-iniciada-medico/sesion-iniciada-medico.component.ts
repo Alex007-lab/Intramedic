@@ -7,13 +7,36 @@ import { AuthService } from 'src/app/autentication.service';
   styleUrls: ['./sesion-iniciada-medico.component.css']
 })
 export class SesionIniciadaMedicoComponent implements OnInit{
-  Medico:string;
+  Medico:any;
 
   constructor(private ServicioMedico:AuthService){}
 
 
+  ExpedienteVisibility: boolean = true;
+  LaboratorioVisibility: boolean = false;
+  RecetaVisibility: boolean = false;
+  UrgenciaVisibility: boolean = false;
+  citasVisibility: boolean = false;
+
+  Cita() {
+    this.citasVisibility = !this.citasVisibility;
+  }
+  Expediente() {
+    this.ExpedienteVisibility = !this.ExpedienteVisibility;
+  }
+  Laboratorio() {
+    this.LaboratorioVisibility = !this.LaboratorioVisibility;
+  }
+  Receta() {
+    this.RecetaVisibility = !this.RecetaVisibility;
+  }
+  Urgencia() {
+    this.UrgenciaVisibility = !this.UrgenciaVisibility;
+  }
+
+
   ngOnInit(): void {
-    this.Medico = this.ServicioMedico.MedicEncontrado.name;
+    this.Medico = this.ServicioMedico.getUsuarioMedic();
     console.log(this.Medico)
   }
 

@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/autentication.service';
 import { Medic } from 'src/app/models/User';
 
 @Component({
-  selector: 'app-medico',
+  selector: 'app-medico-auth',
   templateUrl: './medico.component.html',
   styleUrls: ['./medico.component.css']
 })

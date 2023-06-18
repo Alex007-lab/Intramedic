@@ -7,50 +7,26 @@
 
 <body>
     <header>
-        <h2 >Bienvenido  </h2>
+      <h1 style="text-align: center;">INTRAMEDIC</h1>
+        <h2 >Bienvenido {{paciente.name}} {{paciente.lastName}} </h2>
         <hr>
-        <div class="another">
-          <ul class="nav nav-tabs nav-fill" style="color: rgba(240, 248, 255, 0);">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="../CitasPaciente">Citas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  routerLink="../ResulPaciente"> Resultados de laboratorio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Generar Expediente Medico</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Generar Receta Medica</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Registrar Urgencia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cerrar Sesión</a>
-            </li>
-          </ul>
+        <div class="btn-group d-flex justify-content-between btn-group-space" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-custom" (click)="Citas()">Citas</button>
+          <button type="button" class="btn btn-custom" (click)="Laboratorio()">Laboratorio</button>
+          <button type="button" class="btn btn-custom" (click)="Quejas()">Quejas</button>
+          <button type="button" class="btn btn-custom" (click)="Pago()">Pagos</button>
         </div>
-
     </header>
 
     <main>
-        <section>
-            <h3 style="text-align: center;">Pacientes</h3>
-            <br>
-            <hr>
-        </section>
+      <section>
+        <app-paciente-citas *ngIf="citasVisibility"></app-paciente-citas>
+      </section>
+      <section>
+        <app-paciente-citas *ngIf="citasVisibility"></app-paciente-citas>
+      </section>
 
-        <section>
-          <h3 style="text-align: center;">Citas Próximas</h3>
-          <br>
-          <hr>
-        </section>
 
-        <section>
-            <h3>Historial Médico</h3>
-            <!-- Contenido relacionado con historial médico -->
-        </section>
     </main>
 
     <footer>
