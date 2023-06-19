@@ -2,31 +2,31 @@
 <html>
 <head>
   <title>Añadir Resultados de Laboratorio</title>
-  <link rel="stylesheet" type="text/css" href="resultados-medic.component.css">
+
 </head>
 <body>
   <div class="container">
     <h2>Añadir Resultados de Laboratorio</h2>
-    <form>
+    <form (ngSubmit)="f.form.valid && IngresarResultado()" #f="ngForm">
       <div class="form-group">
         <label for="nombre">Nombre del Paciente:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="NombreP" required>
       </div>
       <div class="form-group">
         <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" required>
+        <input type="number" id="edad" name="edad"  [(ngModel)]="edad" required>
       </div>
       <div class="form-group">
         <label for="resultado">Resultado:</label>
-        <textarea id="resultado" name="resultado" rows="4" required></textarea>
+        <textarea id="resultado" name="resultado" rows="4" [(ngModel)]="Resultado" required></textarea>
       </div>
       <div class="form-group">
         <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" name="fecha" required>
+        <input type="date" id="fecha" name="fecha" [(ngModel)]="fechaSeleccionada" required>
       </div>
       <div class="form-group">
         <label for="doctor">Doctor/a:</label>
-        <input type="text" id="doctor" name="doctor" required>
+        <input type="text" id="doctor" name="doctor" [(ngModel)]="doctor"required>
       </div>
       <div class="form-group">
         <label for="tipo-analisis">Tipo de Análisis:</label>

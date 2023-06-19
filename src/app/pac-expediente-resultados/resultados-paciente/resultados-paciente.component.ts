@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ResultadosService } from 'src/app/resultados..service';
 
 @Component({
   selector: 'app-resultados-paciente',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ResultadosPacienteComponent {
 
+  constructor(private ResultadosServicio:ResultadosService){}
+
+  
 }
