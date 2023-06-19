@@ -27,6 +27,7 @@ import { AuthService } from './autentication.service';
 import { citaService } from './cita.service';
 import { CitasEComponent } from './pac-citas/citas-e/citas-e.component';
 import { CitasMGComponent } from './pac-citas/citas-mg/citas-mg.component';
+import { MedicoComponentCitas } from './pac-citas/medico/medico.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { CitasMGComponent } from './pac-citas/citas-mg/citas-mg.component';
     PacienteComponentCitas,
     CitasComponentL,
     CitasEComponent,
-    CitasMGComponent
+    CitasMGComponent,
+    MedicoComponentCitas
   ],
   imports: [
     BrowserModule,

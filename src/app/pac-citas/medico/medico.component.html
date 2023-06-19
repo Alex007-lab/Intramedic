@@ -1,1 +1,146 @@
-<p>medico works!</p>
+<h1>Agendar Cita Médica</h1>
+<div class="container">
+  <select
+    class="form-select form-select-lg mb-3"
+    aria-label=".form-select-lg example"
+    (change)="onChange($event)"
+  >
+    <option selected>Selecciona el tipo de usuario</option>
+    <option value="1">Crear Cita Médica</option>
+    <option value="2">Visualizar Citas</option>
+  </select>
+
+  <div *ngIf="opcionSeleccionada === '1'">
+    <form (ngSubmit)="f.form.valid && CrearCita()" #f="ngForm">
+      <div class="form-group">
+        <label for="nombre">Nombre del medico:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          [(ngModel)]="doctor"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="tipo-cita">Tipo de Cita:</label>
+        <select (change)="onChange2($event)" id="tipo-cita" name="tipo-cita">
+          <option value="">Seleccione una opción</option>
+          <option value="laboratorio">Cita para Laboratorio</option>
+          <option value="medico-general">Cita con Médico General</option>
+          <option value="medico-especialista">
+            Cita con Médico Especialista
+          </option>
+        </select>
+
+        <div *ngIf="opcionSeleccionada2 === 'laboratorio'">
+          <div class="form-group">
+            <label for="lab">Estudio a realizar:</label>
+            <input
+              type="text"
+              id="estudio"
+              name="labestudio"
+              [(ngModel)]="estudio"
+            />
+          </div>
+        </div>
+
+        <div *ngIf="opcionSeleccionada2 === 'medico-general'">
+          <div class="form-group">
+            <label for="gral">Comentarios antes de Consulta:</label>
+            <input
+              type="text"
+              id="medgral"
+              name="medgral"
+              [(ngModel)]="Comment"
+            />
+          </div>
+        </div>
+
+        <div *ngIf="opcionSeleccionada2 === 'medico-especialista'">
+          <div class="form-group">
+            <label for="esp">¿Qué especialidad Necesita?:</label>
+            <input
+              type="text"
+              id="Espcialidad"
+              name="Espcialidad"
+              [(ngModel)]="especialidad"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha">Fecha:</label>
+        <input
+          type="date"
+          id="fecha"
+          name="fecha"
+          [(ngModel)]="fechaSeleccionada"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" [(ngModel)]="Hora" required />
+      </div>
+
+      <button type="submit">Agendar Cita</button>
+    </form>
+  </div>
+
+  <div *ngIf="opcionSeleccionada === '2'">
+    <select (change)="onChange2($event)" id="tipo-cita" name="tipo-cita">
+      <option value="">Seleccione una opción</option>
+      <option value="laboratorio">Citas de Laboratorio</option>
+      <option value="medico-general">Citas con Médico General</option>
+      <option value="medico-especialista">Citas con Médico Especialista</option>
+    </select>
+
+    <div *ngIf="opcionSeleccionada2 === 'laboratorio'">
+      <div class="box" id="heading"></div>
+      <div class="box2">
+        <app-citasl
+          *ngFor="let citaElemento of citaLab; let i = index"
+          [citaL]="citaElemento"
+          [Indice]="i"
+        >
+        </app-citasl>
+
+      </div>
+    </div>
+
+    <div *ngIf="opcionSeleccionada2 === 'medico-general'">
+      <div class="box" id="heading"></div>
+      <div class="box2">
+        <app-citas-mg
+          *ngFor="let citaElemento of citaG; let i = index"
+          [citaG]="citaElemento"
+          [Indice]="i"
+        >
+        </app-citas-mg>
+      </div>
+    </div>
+
+    <div *ngIf="opcionSeleccionada2 === 'medico-especialista'">
+      <div class="box" id="heading"></div>
+      <div class="box2">
+        <app-citas-e
+          *ngFor="let citaElemento of citaE; let i = index"
+          [citaE]="citaElemento"
+          [Indice]="i"
+        >
+        </app-citas-e>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="opcionSeleccionada === '3'">
+    <!-- Formulario para borrar cita médica -->
+    <!-- Agrega aquí los campos y elementos necesarios -->
+  </div>
+  <button class="back" routerLink="../DashPatient">Regresar</button>
+  <router-outlet></router-outlet>
+</div>
