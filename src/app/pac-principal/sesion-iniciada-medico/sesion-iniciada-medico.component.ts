@@ -12,7 +12,7 @@ export class SesionIniciadaMedicoComponent implements OnInit{
   constructor(private ServicioMedico:AuthService){}
 
 
-  ExpedienteVisibility: boolean = true;
+  ExpedienteVisibility: boolean = false;
   LaboratorioVisibility: boolean = false;
   RecetaVisibility: boolean = false;
   UrgenciaVisibility: boolean = false;

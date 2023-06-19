@@ -11,6 +11,10 @@ import { SesionIniciadaAdminComponent } from './pac-principal/sesion-iniciada-ad
 import { MedicoComponentCitas } from './pac-citas/medico/medico.component';
 import { PacienteComponentCitas } from './pac-citas/paciente/paciente.component';
 import { ResultadosPacienteComponent } from './pac-expediente-resultados/resultados-paciente/resultados-paciente.component';
+import { QuejasGralComponent } from './pac-atencion-cliente/quejas-gral/quejas-gral.component';
+import { MedicComponent } from './pac-urgencias-defuncion/medic/medic.component';
+import { PagoClienteComponent } from './pac-pago/pago-cliente/pago-cliente.component';
+import { GestorExpedienteComponent } from './pac-expediente-resultados/gestor-expediente/gestor-expediente.component';
 
 const routes: Routes = [
   { path: 'LoginRegister', component: LoginRegisterComponent },
@@ -24,6 +28,13 @@ const routes: Routes = [
   { path: 'CitasMedico', component: MedicoComponentCitas },
   { path: 'CitasPaciente', component: PacienteComponentCitas },
   { path: 'ResulPaciente', component: ResultadosPacienteComponent },
+  { path: 'Queja', component: QuejasGralComponent },
+  { path: 'Urgencia', component: MedicComponent },
+  { path: 'Pago', component: PagoClienteComponent },
+  { path: 'Expediente', component: GestorExpedienteComponent },
+
+
+
 ];
 
 @NgModule({

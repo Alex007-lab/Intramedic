@@ -1,1 +1,180 @@
-<p>medic works!</p>
+<h1>Urgencias</h1>
+<div class="container">
+  <select
+    class="form-select form-select-lg mb-3"
+    aria-label=".form-select-lg example"
+    (change)="onChange($event)"
+    >
+      <option selected>Que accion deseas realizar</option>
+      <option value="1">Registrar nuevo paciente</option>
+      <option value="2">Dar de Alta paciente</option>
+    </select>
+
+    <div *ngIf="opcionSeleccionada === '1'">
+      <form (ngSubmit)="f.form.valid && CrearCita()" #f="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre del paciente:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            [(ngModel)]="doctor"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo-cita">Razon de Ingreso al Hospital:</label>
+            <input
+            type="text"
+            id="tipo-cita"
+            name="tipo-cita"
+            [(ngModel)]="doctor"
+            required
+          />
+
+
+          <div *ngIf="opcionSeleccionada2 === 'laboratorio'">
+            <div class="form-group">
+              <label for="lab">Estudio a realizar:</label>
+              <input
+                type="text"
+                id="estudio"
+                name="labestudio"
+                [(ngModel)]="estudio"
+              />
+            </div>
+          </div>
+
+          <div *ngIf="opcionSeleccionada2 === 'medico-general'">
+            <div class="form-group">
+              <label for="gral">Comentarios antes de Consulta:</label>
+              <input
+                type="text"
+                id="medgral"
+                name="medgral"
+                [(ngModel)]="Comment"
+              />
+            </div>
+          </div>
+
+          <div *ngIf="opcionSeleccionada2 === 'medico-especialista'">
+            <div class="form-group">
+              <label for="esp">¿Qué especialidad Necesita?:</label>
+              <input
+                type="text"
+                id="Espcialidad"
+                name="Espcialidad"
+                [(ngModel)]="especialidad"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input
+            type="date"
+            id="fecha"
+            name="fecha"
+            [(ngModel)]="fechaSeleccionada"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" name="hora" [(ngModel)]="Hora" required />
+        </div>
+
+        <button type="submit">Registrar Paciente</button>
+      </form>
+    </div>
+
+    <div *ngIf="opcionSeleccionada === '2'">
+      <form (ngSubmit)="f.form.valid && CrearCita()" #f="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre del paciente:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            [(ngModel)]="doctor"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo-cita">Detalles de la visita al Hospital:</label>
+            <input
+            type="text"
+            id="tipo-cita"
+            name="tipo-cita"
+            [(ngModel)]="doctor"
+            required
+          />
+
+
+          <div *ngIf="opcionSeleccionada2 === 'laboratorio'">
+            <div class="form-group">
+              <label for="lab">Estudio a realizar:</label>
+              <input
+                type="text"
+                id="estudio"
+                name="labestudio"
+                [(ngModel)]="estudio"
+              />
+            </div>
+          </div>
+
+          <div *ngIf="opcionSeleccionada2 === 'medico-general'">
+            <div class="form-group">
+              <label for="gral">Comentarios antes de Consulta:</label>
+              <input
+                type="text"
+                id="medgral"
+                name="medgral"
+                [(ngModel)]="Comment"
+              />
+            </div>
+          </div>
+
+          <div *ngIf="opcionSeleccionada2 === 'medico-especialista'">
+            <div class="form-group">
+              <label for="esp">¿Qué especialidad Necesita?:</label>
+              <input
+                type="text"
+                id="Espcialidad"
+                name="Espcialidad"
+                [(ngModel)]="especialidad"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha de Alta:</label>
+          <input
+            type="date"
+            id="fecha"
+            name="fecha"
+            [(ngModel)]="fechaSeleccionada"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" name="hora" [(ngModel)]="Hora" required />
+        </div>
+
+        <button type="submit">Generar Alta</button>
+      </form>
+    </div>
+
+    <div *ngIf="opcionSeleccionada === '3'">
+
+    </div>
+    <button class="back" routerLink="../DashPatient">Regresar</button>
+    <router-outlet></router-outlet>
+  </div>

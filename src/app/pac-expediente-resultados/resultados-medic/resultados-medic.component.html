@@ -1,1 +1,52 @@
-<p>resultados-medic works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Añadir Resultados de Laboratorio</title>
+  <link rel="stylesheet" type="text/css" href="resultados-medic.component.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Añadir Resultados de Laboratorio</h2>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre del Paciente:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+      </div>
+      <div class="form-group">
+        <label for="resultado">Resultado:</label>
+        <textarea id="resultado" name="resultado" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+      <div class="form-group">
+        <label for="doctor">Doctor/a:</label>
+        <input type="text" id="doctor" name="doctor" required>
+      </div>
+      <div class="form-group">
+        <label for="tipo-analisis">Tipo de Análisis:</label>
+        <select id="tipo-analisis" name="tipo-analisis" required>
+          <option value="">Seleccionar</option>
+          <option value="Hematología">Hematología</option>
+          <option value="Química Sanguínea">Química Sanguínea</option>
+          <option value="Microbiología">Microbiología</option>
+          <option value="Inmunología">Inmunología</option>
+          <option value="Genética">Genética</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Guardar">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

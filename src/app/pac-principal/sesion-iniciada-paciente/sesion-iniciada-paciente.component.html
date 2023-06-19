@@ -15,12 +15,22 @@
           <button type="button" class="btn btn-custom" (click)="Laboratorio()">Laboratorio</button>
           <button type="button" class="btn btn-custom" (click)="Quejas()">Quejas</button>
           <button type="button" class="btn btn-custom" (click)="Pago()">Pagos</button>
+          <button type="button" class="btn btn-custom" routerLink="">Cerrar Sesion</button>
         </div>
     </header>
 
     <main>
       <section>
         <app-paciente-citas *ngIf="citasVisibility"></app-paciente-citas>
+      </section>
+      <section>
+        <app-resultados-paciente *ngIf="LaboratorioVisibility"></app-resultados-paciente>
+      </section>
+      <section>
+        <app-quejas-gral *ngIf="QuejasVisibility"></app-quejas-gral>
+      </section>
+      <section>
+        <app-pago-cliente *ngIf="PagoVisibility"></app-pago-cliente>
       </section>
 
 

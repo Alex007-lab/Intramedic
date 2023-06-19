@@ -6,7 +6,6 @@ import { PagoClienteComponent } from './pago-cliente/pago-cliente.component';
 
 @NgModule({
   declarations: [
-    PagoClienteComponent
   ],
   imports: [
     CommonModule

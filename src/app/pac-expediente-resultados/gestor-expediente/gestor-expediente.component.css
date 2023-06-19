@@ -1,0 +1,38 @@
+body {
+  background-color: #eaf2f8;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333333;
+}
+
+#impresiones-container {
+  margin-top: 20px;
+}
+
+.impresion {
+  background-color: #f3f8fd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.impresion h3 {
+  color: #3498db;
+  margin-top: 0;
+}
+
+.impresion p {
+  color: #555555;
+}

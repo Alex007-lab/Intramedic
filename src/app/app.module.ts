@@ -28,6 +28,8 @@ import { citaService } from './cita.service';
 import { CitasEComponent } from './pac-citas/citas-e/citas-e.component';
 import { CitasMGComponent } from './pac-citas/citas-mg/citas-mg.component';
 import { MedicoComponentCitas } from './pac-citas/medico/medico.component';
+import { QuejasGralComponent } from './pac-atencion-cliente/quejas-gral/quejas-gral.component';
+import { PagoClienteComponent } from './pac-pago/pago-cliente/pago-cliente.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { MedicoComponentCitas } from './pac-citas/medico/medico.component';
     CitasComponentL,
     CitasEComponent,
     CitasMGComponent,
-    MedicoComponentCitas
+    MedicoComponentCitas,
+    QuejasGralComponent,
+    PagoClienteComponent,
   ],
   imports: [
     BrowserModule,

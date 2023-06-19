@@ -22,10 +22,19 @@
 
     <main>
       <section>
-
+        <app-resultados-medic *ngIf="LaboratorioVisibility"></app-resultados-medic>
       </section>
       <section>
         <app-medico-citas *ngIf="citasVisibility"></app-medico-citas>
+      </section>
+      <section>
+          <app-gestor-expediente *ngIf="ExpedienteVisibility"></app-gestor-expediente>
+      </section>
+      <section>
+        <app-medic-defuncion *ngIf="UrgenciaVisibility"></app-medic-defuncion>
+      </section>
+      <section>
+        <app-recetas *ngIf="RecetaVisibility" ></app-recetas>
       </section>
 
 

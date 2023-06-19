@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/autentication.service';
 export class SesionIniciadaPacienteComponent implements OnInit {
   paciente:any;
   selectedComponent: string;
-  citasVisibility: boolean = true;
+  citasVisibility: boolean = false;
   LaboratorioVisibility: boolean = false;
   QuejasVisibility: boolean = false;
   PagoVisibility: boolean = false;

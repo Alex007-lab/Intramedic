@@ -7,8 +7,6 @@ import { QuejasAdminComponent } from './quejas-admin/quejas-admin.component';
 
 @NgModule({
   declarations: [
-    QuejasGralComponent,
-    QuejasAdminComponent
   ],
   imports: [
     CommonModule
